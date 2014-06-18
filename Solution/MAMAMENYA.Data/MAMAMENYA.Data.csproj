@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8E2200DA-09E1-459C-A797-F96C8224F83B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MAMAMENYA.Data</RootNamespace>
+    <AssemblyName>MAMAMENYA.Data</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\..\LIB\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Inflector.Net">
+      <HintPath>..\..\LIB\Inflector.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LIB\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\LIB\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpArch">
+      <HintPath>..\..\LIB\SharpArch.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountMembershipService.cs" />
+    <Compile Include="ActivityRepository.cs" />
+    <Compile Include="AdvertisementRepository.cs" />
+    <Compile Include="AnswerRepository.cs" />
+    <Compile Include="ArticleClassRepository.cs" />
+    <Compile Include="ArticleRepository.cs" />
+    <Compile Include="BaLaBaLaRepository.cs" />
+    <Compile Include="BrandRepository.cs" />
+    <Compile Include="BuyOrderRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommentRepository.cs" />
+    <Compile Include="CommonCodeRepository.cs" />
+    <Compile Include="FavoriteRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NHibernateMaps\AutoPersistenceModelGenerator.cs" />
+    <Compile Include="NHibernateMaps\CommonCodeMap.cs" />
+    <Compile Include="NHibernateMaps\Conventions\ColumnConvention.cs" />
+    <Compile Include="NHibernateMaps\Conventions\ForeignKeyConvention.cs" />
+    <Compile Include="NHibernateMaps\Conventions\HasManyConvention.cs" />
+    <Compile Include="NHibernateMaps\Conventions\HasManyToManyConvention.cs" />
+    <Compile Include="NHibernateMaps\Conventions\ManyToManyTableNameConvention.cs" />
+    <Compile Include="NHibernateMaps\Conventions\MapConvention.cs" />
+    <Compile Include="NHibernateMaps\Conventions\PrimaryKeyConvention.cs" />
+    <Compile Include="NHibernateMaps\Conventions\ReferenceConvention.cs" />
+    <Compile Include="NHibernateMaps\Conventions\TableNameConvention.cs" />
+    <Compile Include="NHibernateMaps\SettingMap.cs" />
+    <Compile Include="NHibernateMaps\UserMap.cs" />
+    <Compile Include="ProductClassRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProductRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestionClassRepository.cs" />
+    <Compile Include="QuestionRepository.cs" />
+    <Compile Include="SettingRepository.cs" />
+    <Compile Include="UserRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MAMAMENYA.Common\MAMAMENYA.Common.csproj">
+      <Project>{D2AF200D-49D6-400F-931E-0F5B955266E8}</Project>
+      <Name>MAMAMENYA.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MAMAMENYA.Core\MAMAMENYA.Core.csproj">
+      <Project>{2E058BDA-CA11-4689-8B3F-EDB00754A585}</Project>
+      <Name>MAMAMENYA.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

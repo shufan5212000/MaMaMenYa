@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteFront.master.cs" Inherits="MAMAMENYA.FormWeb.SiteFront" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="/Style/css_all.css" rel="stylesheet" type="text/css" />
+    <link href="/Style/enter.css" rel="stylesheet" type="text/css" />
+     <script type="text/javascript" src="/Scripts/jquery-1.4.2.js"></script>
+      <script type="text/javascript" src="/Scripts/jquery.form.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-ui-1.8.22.custom.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Styles/ui-lightness/jquery-ui-1.8.22.custom.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<div id="Top">
+<div class="thirdLogin w960">
+<ul>
+<li><a href="#" class="head_qq">QQ登录</a></li>
+<li><a href="#" class="head_sina">新浪微博登录</a></li>
+</ul>
+</div>
+</div>
+
+
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    
+<div class="foot">
+<div class="footContent">
+
+<ul>
+<h4>关于我们</h4>
+<li> <a href="#">妈妈们呀</a></li>
+<li><a href="#">妈妈们呀</a></li>
+<li><a href="#">妈妈们呀</a></li>
+</ul>
+
+<ul>
+<h4>商家合作</h4>
+<li><a href="#">妈妈们呀</a></li>
+<li><a href="#">妈妈们呀</a></li>
+<li><a href="#">妈妈们呀</a></li>
+</ul>
+<ul>
+<h4>商家合作</h4>
+<li><a href="#">妈妈们呀</a></li>
+<li><a href="#">妈妈们呀</a></li>
+<li><a href="#">妈妈们呀</a></li>
+</ul>
+
+<ul>
+<h4>关注我们</h4>
+<dl>
+<img src="img/erweima.jpg" />
+<Br />
+关注我们，更好的为您提供质优价廉的商品。
+</dl>
+</ul>
+
+
+
+
+
+
+</div>
+
+
+<div class="copyright">版权所有：济南妈妈们呀商贸有限公司<br />
+ Copyright © 2010-2014 ETAO.COM 版权所有
+
+增值电信业务经营许可证：浙B2-20080224</div>
+
+</div>
+</body>
+</html>

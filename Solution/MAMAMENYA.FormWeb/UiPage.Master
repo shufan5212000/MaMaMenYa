@@ -1,0 +1,209 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UiPage.master.cs" Inherits="MAMAMENYA.FormWeb.UiPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+ 
+      <link rel="stylesheet" type="text/css" href="/Style/global.css"  />
+       <link rel="stylesheet"  href="/Style/boxy,jquery.fancybox-1.3.4.css" />
+     <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<%--<body>
+  <%--  <form id="form1" runat="server">--%>
+            <div class="header">
+    <div class="headWrap">
+        <div class="headTop fn-clear">
+            <h1 class="logo">
+                <a href="" title="妈妈们呀" style="float: left;" > 妈妈们呀</a>
+          
+            </h1>
+     
+            <h2 class="slogan" title="帮你发现周边好玩的地方">帮你发现周边好玩的地方</h2>
+
+
+            <div class="loginInfo">
+                <!--已登录状态-->
+                
+                <!--未登录状态-->
+                <!--   <div class="write-journey" ><a href="javascript:void(0);" onClick="javascript:needLogin();">写游记</a></div>   -->              
+                <ul class="not_login">
+                    <li><a href="reg.php" class="btn_reg">注册</a></li>
+                    <li><a href="javascript:needLogin();"  id="top-nav-login" class="btn_login">登录</a></li>
+                    <li><a href="trd/sina2/index.php" class="login_sina"><em>新浪</em>微博登陆</a></li>
+                    <li><a href="trd/tencent/index.php" class="login_qq"><em>腾讯</em>微博登陆</a></li>
+                </ul>
+
+                                <!--未登录状态end-->
+            </div>
+
+        </div>
+
+
+        <ul class="dropdown">
+            <li >
+                <a href="" >首页</a>
+            </li>
+            <li class=" has_child_menu" >
+                <a href="zhuanti/" class="has_child" >发现好玩</a>
+                     <ul class="sub_menu">
+                         <li><a href="zhuanti/">专&nbsp;&nbsp;&nbsp;&nbsp;题</a></li>
+                         <li><a href="lvyouquan/">旅游圈</a></li>
+                         <li><a href="interest/">旅图社</a></li>
+                         <li><a href="tuijian/">精选景点</a></li>
+                     </ul>
+                     <span></span>
+
+                 </li>
+                 <li  class=" "><a href="city/" >城市导游</a></li>
+                 <li  class=" "><a href="gonglue/" >游记</a></li>
+
+                 <li class="  has_child_menu">
+                     <a href="book/" class="has_child">优惠预订</a>
+
+                     <ul class="sub_menu">
+                         <li><a href="book/">欢乐购</a></li>
+                         <li><a href="youhui/">优&nbsp;&nbsp;惠</a></li>
+
+                     </ul>
+
+                 </li>
+                 <li class=" "><a href="event/"  >出发吧</a></li>
+
+            </ul>
+
+
+            <div class="navSearch">
+                <form action="pages/search/blog.php" method="get" id="searchForm" target="_blank">
+                    <input name="k" type="text" class="top-search-input" id="searchKey" value="搜索微博/人/地点/话题" maxlength="50"
+                           autocomplete="off">
+                    <input name="" type="submit" value="搜索" class="search_btn">
+
+                </form>
+                <div id="keyword_tip_content"></div>
+            </div>
+        </div>
+    </div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+  
+  
+  
+  
+  
+    <div class="footer " >
+    <div class="footerWrap fn-clear">
+
+        <ul class="about_roadqu ">
+            <li><a href="pages/about/aboutus.php" target="_blank">关于路趣</a>|</li>
+
+            <li><a href="pages/about/contactus.php" target="_blank">联系我们</a>|</li>
+
+            <li><a href="pages/about/convention.php">用户公约</a>|</li>
+
+            <li><a href="tag/微建议">意见反馈</a>|</li>
+            <li><a href="pages/about/newguide1.php">帮助中心</a>|</li>
+            <li><a href="link.php">友情链接</a></li>
+        
+        </ul>
+        <div class="foot">
+          <p>
+
+            <span class="fn-left">
+              
+版权所有：深圳市路友网络科技有限公司  <a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow" >粤ICP备12008262号-2</a>
+
+
+  <a href="#" >增值电信业务经营许可证 粤B2-20120564</a>
+
+            </span>
+       
+
+   
+
+        </p>
+            <div class="sns">
+               
+                <span>关注我们： </span><a href="http://weibo.com/roadqu" class="login_sina">新浪微博 </a><a href="http://t.qq.com/roadqu" class="login_qq">腾讯微博</a>
+           
+ <a href="http://trust.360.cn/search.php" target="_blank" title="360绿色网站"><img src="http://trust.360.cn/img.php?sn=5229&id=5" border="0" /></a> 
+            
+
+
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>
+<!-- footer end -->
+ <script type="text/javascript" src="/Scripts/jquery-1.7.2.js"></script>
+ <script type="text/javascript" src="/Scripts/jquery.form.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        //导航菜单
+        $("li.has_child_menu").hover(function () {
+
+            $(this).addClass("hover");
+            $('ul:first', this).css('visibility', 'visible');
+
+        }, function () {
+
+            $(this).removeClass("hover");
+            $('ul:first', this).css('visibility', 'hidden');
+
+        });
+
+
+
+        // 用户下拉菜单
+        var config = {
+            sensitivity: 3, // number = sensitivity threshold (must be 1 or higher)    
+            interval: 200,  // number = milliseconds for onMouseOver polling interval    
+            over: doOpen,   // function = onMouseOver callback (REQUIRED)    
+            timeout: 200,   // number = milliseconds delay before onMouseOut    
+            out: doClose    // function = onMouseOut callback (REQUIRED)    
+        };
+
+        function doOpen() {
+            $(this).addClass("dropdown-hover");
+            $('#select-menu').css('visibility', 'visible');
+        }
+
+        function doClose() {
+
+            $(this).removeClass("dropdown-hover");
+            $('#select-menu').css('visibility', 'hidden');
+        }
+
+
+    });
+</script>
+<a href="#map_picker_content" id="mappickerfancybox" class="disnone">更改</a>
+<div class="disnone" id="map_picker_wrap">
+    <div id="map_picker_content"></div>
+</div>
+
+
+
+<!-- js -->
+<a href='#' id='gotop' class='gotop-btn fn-hide' onClick="window.scrollTo(0,0);return false"></a>
+
+
+
+
+<!-- 添加统计代码 -->
+<div class="disnone" id="tongjicode">
+  
+</div>
+    <%--</form>--%>
+</body>
+</html>

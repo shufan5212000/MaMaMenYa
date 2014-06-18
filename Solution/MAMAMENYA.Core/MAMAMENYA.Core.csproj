@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2E058BDA-CA11-4689-8B3F-EDB00754A585}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MAMAMENYA.Core</RootNamespace>
+    <AssemblyName>MAMAMENYA.Core</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SharpArch">
+      <HintPath>..\..\LIB\SharpArch.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activity.cs" />
+    <Compile Include="Advertisement.cs" />
+    <Compile Include="Area.cs" />
+    <Compile Include="Article.cs" />
+    <Compile Include="ArticleClass.cs" />
+    <Compile Include="BaLaBaLa.cs" />
+    <Compile Include="Brand.cs" />
+    <Compile Include="BuyOrder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Comment.cs" />
+    <Compile Include="CommonCode.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Favorite.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IntegralRecord.cs" />
+    <Compile Include="InterfaceRepository\IActivityRepository.cs" />
+    <Compile Include="InterfaceRepository\IAdvertisementRepository.cs" />
+    <Compile Include="InterfaceRepository\IAnswerRepository.cs" />
+    <Compile Include="InterfaceRepository\IArticleClassRepository.cs" />
+    <Compile Include="InterfaceRepository\IArticleRepository.cs" />
+    <Compile Include="InterfaceRepository\IBaLaBaLaRepository.cs" />
+    <Compile Include="InterfaceRepository\IBrandRepository.cs" />
+    <Compile Include="InterfaceRepository\ICommentRepository.cs" />
+    <Compile Include="InterfaceRepository\ICommonCodeRepository.cs" />
+    <Compile Include="InterfaceRepository\IFavoriteRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InterfaceRepository\IBuyOrderRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InterfaceRepository\IProductClassRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InterfaceRepository\IProductRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InterfaceRepository\IQuestionClassRepository.cs" />
+    <Compile Include="InterfaceRepository\IQuestionRepository.cs" />
+    <Compile Include="InterfaceRepository\ISettingRepository.cs" />
+    <Compile Include="InterfaceRepository\IUserRepository.cs" />
+    <Compile Include="InternalMsg.cs" />
+    <Compile Include="OnePage.cs" />
+    <Compile Include="Product.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProductClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProductClassModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Question.cs" />
+    <Compile Include="Setting.cs" />
+    <Compile Include="SignIn.cs" />
+    <Compile Include="SysConfig.cs" />
+    <Compile Include="SysLog.cs" />
+    <Compile Include="Tag.cs" />
+    <Compile Include="User.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MAMAMENYA.Common\MAMAMENYA.Common.csproj">
+      <Project>{D2AF200D-49D6-400F-931E-0F5B955266E8}</Project>
+      <Name>MAMAMENYA.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MAMAYA.master.cs" Inherits="MAMAMENYA.FormWeb.MAMAYA" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/Styles/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/admin-all.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/ui-lightness/jquery-ui-1.8.22.custom.css" />
+     <link rel="stylesheet" type="text/css" href="/Styles/chur.css" />
+    <script type="text/javascript" src="/Scripts/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.form.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-ui-1.8.22.custom.min.js"></script>
+    <script type="text/javascript" src="/Scripts/tip.js"></script>
+    <script type="text/javascript" src="/Scripts/ui-page.js"></script>
+    <script type="text/javascript" src="/Scripts/chur-alert.1.0.js"></script>
+    <script src="/Scripts/Common.js" type="text/javascript" language="javascript"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    </div>
+    <div class="alert alert-info">
+        当前位置<b class="tip"></b>查询界面<b class="tip"></b>查询结果一</div>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    </form>
+ <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

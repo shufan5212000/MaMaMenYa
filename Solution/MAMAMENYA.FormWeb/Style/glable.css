@@ -1,0 +1,23 @@
+.clearfix:before,.clearfix:after {
+	content:"";
+	display:table
+}
+.clearfix:after {
+	clear:both
+}
+.clearfix {
+	zoom:1
+}
+.fm960 {
+	margin:0 auto;
+	width:960px
+}
+
+.fr {
+	float:right;
+	display:inline
+}
+.fl {
+	float:left;
+	display:inline
+}

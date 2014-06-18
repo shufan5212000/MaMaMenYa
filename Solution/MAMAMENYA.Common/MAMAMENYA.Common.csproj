@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D2AF200D-49D6-400F-931E-0F5B955266E8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MAMAMENYA.Common</RootNamespace>
+    <AssemblyName>MAMAMENYA.Common</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\LIB\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc">
+      <HintPath>..\..\LIB\Microsoft.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib">
+      <HintPath>..\..\LIB\MvcContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib.FluentHtml">
+      <HintPath>..\..\LIB\MvcContrib.FluentHtml.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\LIB\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\LIB\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpArch">
+      <HintPath>..\..\LIB\SharpArch.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.QRCode">
+      <HintPath>..\..\LIB\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionLinkForAreasWithAuthorize.cs" />
+    <Compile Include="Attributes\Transaction.cs" />
+    <Compile Include="CommonInterface\MembershipService.cs" />
+    <Compile Include="Controller\ControllerBase.cs" />
+    <Compile Include="Core\EntityBase.cs" />
+    <Compile Include="Core\FieldLengthAttribute.cs" />
+    <Compile Include="Core\IRepository.cs" />
+    <Compile Include="Core\NotMapAttribute.cs" />
+    <Compile Include="Data\Repository.cs" />
+    <Compile Include="EnumExtenstion.cs" />
+    <Compile Include="ExpressionHelperEx.cs" />
+    <Compile Include="HtmlEnumExtentions.cs" />
+    <Compile Include="HtmlExtentions.cs" />
+    <Compile Include="HttpRequestBaseExtentions.cs" />
+    <Compile Include="IExceptionModel.cs" />
+    <Compile Include="LinkAreasExtensions.cs" />
+    <Compile Include="Nhibernate\BetterSqlCriterion.cs" />
+    <Compile Include="Nhibernate\DateTimeExtentions.cs" />
+    <Compile Include="Nhibernate\EnumHelper.cs" />
+    <Compile Include="Nhibernate\RandomOrder.cs" />
+    <Compile Include="Nhibernate\ThreadSafeDictionary.cs" />
+    <Compile Include="Nhibernate\ThreadSessionStorage.cs" />
+    <Compile Include="Nhibernate\WebAndStaticSessionStorage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QRCodeCreater.cs" />
+    <Compile Include="QueryableExtentions.cs" />
+    <Compile Include="QueryOverExtentions.cs" />
+    <Compile Include="Range.cs" />
+    <Compile Include="RecordList.cs" />
+    <Compile Include="ReflectionExtensions.cs" />
+    <Compile Include="Security.cs" />
+    <Compile Include="StringExtentions.cs" />
+    <Compile Include="UploadFile\TestUploadFile.cs" />
+    <Compile Include="UploadFile\UploadFile.cs" />
+    <Compile Include="UploadFile\UploadFileLog.cs" />
+    <Compile Include="UrlExtensions.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
