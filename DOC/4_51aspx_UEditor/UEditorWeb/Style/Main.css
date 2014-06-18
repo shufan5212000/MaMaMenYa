@@ -1,0 +1,106 @@
+﻿html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin:0;
+	padding:0;
+	border:0;
+	font-weight:inherit;
+	font-style:inherit;
+	font-size:12px;
+	font-family:inherit;
+	vertical-align:baseline;
+}
+body {
+	color:#222;
+	background:#fff;
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+caption, th, td {
+	font-weight:normal;
+}
+table, td, th {
+	vertical-align:middle;
+	border:0;
+}
+th,td{ padding-left:5px;}
+li
+{
+	list-style-type:none;
+}
+a:link {color: #000; text-decoration:none;}
+a:visited {color: #000; text-decoration:none;}
+a:hover {color: #000; text-decoration:none;}
+a:active {color: #000; text-decoration:none;}
+
+.spage-main-box {
+	margin:0 15px 20px;
+}
+.spage-main-box h3 {
+	border-bottom:1px solid #BBB;
+	font-size:14px;
+	font-weight:bold;
+	padding:5px 2px 6px 5px;
+	margin:20px 0 15px;
+}
+
+.HighLight
+{
+	background-color:#BF9AC5;
+}
+
+.division {
+	border-top:1px solid #ccc;
+	border-left:1px solid #ccc;
+	border-right:2px solid #bec6ce;
+	border-bottom:2px solid #bec6ce;
+	background:#fff;
+	margin:10px;
+	padding:5px;
+	line-height:150%;
+	white-space:normal;
+}
+
+.tableForAdd{ width:100%;border-top:1px solid #ddd;border-left:1px solid #ddd;}
+.tdForSelect,.thForAdd,.tdForAdd{
+	padding:5px;
+	vertical-align:top;
+	border-right:1px solid #DBE2E7;
+	border-left:1px solid #fff;
+	border-bottom:1px solid #ddd;
+}
+.thForAdd {
+	white-space:nowrap;
+	text-align:left;
+	width:250px;
+	background:#E2E8EB;
+	border-right:1px solid #ccc;
+}
+.tdForSelect{ width:20px;}
+.division td {
+	white-space:normal;
+}
+
+.GrayWord{ color:Silver;}
+.fileInput{ width:350px;}
+
+.btn {
+	background:#E2E8EB;
+	border-style:solid;
+	border-color:#FFF #BEC6CE #BEC6CE #FFFFFF;
+	border-width:1px 2px 2px 1px;
+*color:#333;
+	display:inline-block;
+	display:-moz-inline-stack;
+*display:inline;
+	zoom:1;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	margin:0 1px;
+	padding:5px 10px;
+	overflow:visible;
+	text-decoration:none;
+	cursor:pointer;
+}

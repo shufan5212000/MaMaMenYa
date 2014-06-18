@@ -1,0 +1,12 @@
+该Asp .Net控件程序基于百度在线编辑器UEditorV1.2制作，主要是为了方便惯用WebForm控件朋友。2012年04月9日开始添加控件版本号，当前版本1.2.1。业余时间制作，程序中难免存在一些问题，请发本人邮箱531815666@qq.com，欢迎大家指正。
+
+UEditor编辑器官网地址（想下原始版本的可到此处）：http://ueditor.baidu.com/website/index.html
+
+如何部署在实际项目中
+1、拷贝UEditorWeb项目下的Ueditor整个目录到你的实际项目中
+2、在实际项目中添加对UeditorControl.dll的引用（dll文件可以通过生成本解决方案下UeditorControl来获得，生成之后可在该解决方案的bin目录下找到）
+3、给需要使用编辑器的aspx页面头部添加
+   <%@ Register Assembly="UEditorControl" Namespace="UEditorControl" TagPrefix="cc1" %>
+4、在需要放置编辑器的位置添加（ID和Width需要根据实际修改）
+   <cc1:UEditor ID="UEditor1" runat="server" Width="100%">
+    </cc1:UEditor>
